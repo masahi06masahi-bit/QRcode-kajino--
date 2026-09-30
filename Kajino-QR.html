@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajino-QRcode-ver2</title>
+    <!-- QRコードリーダーライブラリ https://github.com/mebjas/html5-qrcode/tree/master?tab=Apache-2.0-1-ov-file を用いる -->
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <!-- QRコードジェネレーターライブラリ-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+            button { 
+        width: 400px;
+        height: 30px;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>テスト用</h1>
+        <h5>file:// で直接開く場合例えば、C:\Users\...\Kajino-QR.htmlをダブルクリックして開く方法では、カメラ機能が正常に使えないことがあります。そのため、https://...またはhttp://localhost:...のようなWebページとして提供する環境で動かす必要がある</h5>
+    </section>
+
+    <h1>Adomin</h1>
+    <section>
+        <h2>新規登録</h2>
+        <h3>QRコード生成</h3>
+        <div id="QR_QRcode_Generator_result" style="display: none;"></div> 
+        <canvas id="QR_QRcode_Generator_image" style="display: none;"></canvas> 
+        <img id="QR_QRcode_Generator_PNG_image">
+        <br>
+        <input id="QR_QRcode_Generator_input_text">
+        <br>
+        <button id="QR_QRcode_Generator_button">QRコード生成</button>
+        
+        <script src="Kajino-QRcode-Generator.js"></script>
+    </section>　
+
+    <section>
+        <h2>情報参照</h2>
+        <h3>QRコードリーダー</h3>
+        <div id="QR_QRcode_reader"  style="width: 400px; height: 4%;"></div>
+        <button id="QR_QRcode_reader_button" type="text"></button>
+        <p id="QR_QRcode_reader_result">読み取り結果：</p>
+        <script src="Kajino-QRcode-Reader.js"></script>
+    </section>
+</body>
+</html>
